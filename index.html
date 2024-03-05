@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <!-- <style>
+        .correct { background-color: green; }
+        .incorrect { background-color: red; }
+    </style> -->
+</head>
+<body>
+    <center>
+        <div class="container" >
+
+            <h1>Quiz</h1>
+            <br><br>
+            <h1>Which one of this meal is unhealthy?</h1>     
+            <button onclick="checkAnswer(1)" id="btn1" width="150" height="250"><img src="imgs/Capture1.PNG" alt="" width="133" height="210"></button>
+            <button onclick="checkAnswer(2)" id="btn2" width="150" height="250"><img src="imgs/Capture2.PNG" alt="" width="133" height="210"></button>
+            <button onclick="checkAnswer(3)" id="btn3" width="150" height="250"><img src="imgs/Capture3.PNG" alt="" width="133" height="210"></button>
+            <button onclick="checkAnswer(4)" id="btn4" width="150" height="250"><img src="imgs/Capture4.PNG" alt="" width="133" height="210"></button>
+        </div>
+    </center>
+    <script>
+        function checkAnswer(selectedAnswer) {
+            
+            let correctAnswer = 1; 
+
+            
+            let selectedButton = document.getElementById("btn" + selectedAnswer);
+            if (selectedAnswer === correctAnswer) {
+                selectedButton.classList.add("correct");
+                btn1.style.background = 'green';
+                
+            } else {
+                selectedButton.classList.add("incorrect");
+                btn2.style.background = 'red';
+                btn3.style.background = 'red';
+                btn4.style.background = 'red';
+                
+            }
+
+            
+            document.getElementById("btn1").disabled = true;
+            document.getElementById("btn2").disabled = true;
+            document.getElementById("btn3").disabled = true;
+            document.getElementById("btn4").disabled = true;
+        }
+    </script>
+</body>
+</html>
